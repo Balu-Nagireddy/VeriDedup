@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    color: #333;
+    text-align: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #121212;
+    color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #0073e6, #003366);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header h1 {
+    margin: 20px;
+    font-size: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #003366;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li:hover ul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav ul li ul li {
+    display: block;
+    margin: 10px 0;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Section */
+section {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1.5s ease-in-out;
+    transition: margin-top 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: left;
+}
+
+section h2, section h3, section h4 {
+    color: #0056b3;
+}
+
+section p, section ul {
+    text-align: left;
+    margin: 20px 0;
+}
+
+/* Form Styles */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: auto;
+    align-items: center;
+}
+
+form label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    grid-column: span 2;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    grid-column: span 2;
+    background: #0d47a1;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #08306e;
+}
+
+/* Captcha Image */
+img {
+    grid-column: span 2;
+    margin: auto;
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode section {
+    background: #333;
+    color: #f4f4f4;
+}
+
+body.dark-mode form label {
+    color: #f4f4f4;
+}
+
+body.dark-mode form input, body.dark-mode form select {
+    background: #444;
+    color: #f4f4f4;
+    border: 1px solid #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

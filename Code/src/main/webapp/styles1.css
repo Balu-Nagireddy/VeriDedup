@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #002147, #012b5e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Container */
+.login-container {
+    background: #0f2a4f;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2::before {
+    content: "🔒";
+    margin-right: 8px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+/* Captcha */
+.captcha-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #d3d3d3;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.captcha-container img {
+    height: 40px;
+}
+
+.captcha-container button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Login Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff9800;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e68900;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+    position : absolute;
+    bottom : 0;
+}
