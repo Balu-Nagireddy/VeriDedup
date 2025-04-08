@@ -2,7 +2,7 @@
 
 ![VeriDedup](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 ![Java](https://img.shields.io/badge/Java-17%2B-blue?style=for-the-badge&logo=java)
-![License](https://img.shields.io/github/license/Balu-Nagireddy/veridedup?style=for-the-badge)
+![License](https://img.shields.io/github/license/Balu-Nagireddy/VeriDedup?style=for-the-badge)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)
 
 ---
